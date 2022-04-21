@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/devops_starter_war_exploded";
+const URL = "https://www.eskecphbusiness.dk/devops-starter";
  
 function handleHttpErrors(res) {
  if (!res.ok) {
@@ -42,6 +42,13 @@ const logout = () => {
   localStorage.removeItem("jwtToken");
 }
 
+const saveCocktail = (cocktail) => {
+  const options = makeOptions("POST", false,{ingredient1: cocktail.ingredient1, ingredient2: cocktail.ingredient2, ingredient3: cocktail.ingredient3});
+  return fetch(URL + "/api/cocktail", options)
+  .then(handleHttpErrors)
+  .then(res => {setToken(res.token) })
+}
+
 const makeOptions= (method,addToken,body) =>{
     var opts = {
         method: method,
@@ -66,7 +73,8 @@ const makeOptions= (method,addToken,body) =>{
         login,
         logout,
         fetchUserData,
-        fetchBeerJoke
+        fetchBeerJoke,
+        saveCocktail
     }
    }
 

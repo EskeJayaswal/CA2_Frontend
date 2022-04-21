@@ -1,7 +1,8 @@
 import facade from '../apiFacade'
 import React, { useState,useEffect } from "react"
+import '../styling/User.css'
 
-const Admin = () => {
+const User = () => {
 
   const [dataFromServer, setDataFromServer] = useState("Loading...")
   
@@ -10,10 +11,14 @@ const Admin = () => {
  
   return (
     <div>
-      <h2>Data Received from server</h2>
-      <h3>{dataFromServer}</h3>
+      <div className="container">
+          <div className="frame">
+            <h1>MOVIE TIME</h1>
+            <h3>{dataFromServer}</h3>
+          </div>
+      </div>
     </div>
   )
 }
 
-export default Admin
+export default User

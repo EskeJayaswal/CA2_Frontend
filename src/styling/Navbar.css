@@ -1,0 +1,27 @@
+nav {
+    padding: 14px;
+    /* background-color: rgb(66, 231, 195); */
+    list-style-type: none;
+    text-decoration: none;
+    background-image: linear-gradient(45deg,#9ac0e2,#f1f0fa);
+}
+
+.welcome {
+    float: left;
+    display: block;
+    padding-right: 10px;
+}
+
+.admin {
+    float: right;
+    padding-right: 10px;
+}
+/* 
+.data {
+    float: right;
+} */
+
+.login {
+    float: right;
+    display: block;
+}
