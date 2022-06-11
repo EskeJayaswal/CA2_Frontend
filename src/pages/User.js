@@ -25,24 +25,25 @@ const User = () => {
     number6 = Math.floor(Math.random() * 8) + 1;
  }
 
-//  window.onload = loadNumber1;
-
   const showRandomCocktailData = (randomCocktail) => {
     
       let ingredient1 = `${randomCocktail.drinks[number1].strIngredient1}`
       let ingredient2 = `${randomCocktail.drinks[number2].strIngredient2}`
       let ingredient3 = `${randomCocktail.drinks[number3].strIngredient3}`
+      let measure1 = `${randomCocktail.drinks[number4].strMeasure1}`
+      let measure2 = `${randomCocktail.drinks[number5].strMeasure2}`
+      let measure3 = `${randomCocktail.drinks[number6].strMeasure3}`
 
       setCocktail({ingredient1, ingredient2, ingredient3})
 
       document.getElementById('ingredient1').innerText = ingredient1
-      document.getElementById('amount1').innerText = number4 + " cl"
+      document.getElementById('amount1').innerText = measure1
   
       document.getElementById('ingredient2').innerText = ingredient2
-      document.getElementById('amount2').innerText = number5 + " cl"
+      document.getElementById('amount2').innerText = measure2
   
       document.getElementById('ingredient3').innerText = ingredient3
-      document.getElementById('amount3').innerText = number6 + " cl"
+      document.getElementById('amount3').innerText = measure3
       
   } 
 
